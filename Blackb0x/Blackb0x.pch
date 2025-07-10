@@ -14,7 +14,7 @@
 //#import "crossover.h"
 #import "libprerestore.h"
 
-//#include <libirecovery.h>
+#include <libirecovery.h>
 //#include "libirecovery.h"
 
 #include <libimobiledevice/libimobiledevice.h>

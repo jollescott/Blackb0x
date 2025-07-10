@@ -11,10 +11,16 @@
 #import "DeviceManager.h"
 #import "checkm8.h"
 #import "SHAtter.h"
-
+#ifndef GNUSTEP
 #include "libbootkit.h"
+#else
+#include <libbootkit/libbootkit.h>
+#endif
+#ifndef GNUSTEP
 #include "config.h"
-
+#else
+#include <libbootkit/config.h>
+#endif
 /*
 #import "IOKit/hid/IOHIDManager.h"
 #include <IOKit/usb/IOUSBLib.h>

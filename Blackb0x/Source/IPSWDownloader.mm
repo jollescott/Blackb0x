@@ -13,7 +13,10 @@
 #import "Blackb0x.h"
 #import "IPSWDownloader.h"
 #import <libfragmentzip/libfragmentzip.h>
+
+#ifndef GNUSTEP
 #import <CoreImage/CoreImage.h>
+#endif
 
 class DownloadWrapper {
     

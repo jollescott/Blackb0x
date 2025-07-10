@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "IPSW.h"
 
+#ifdef GNUSTEP
+#include <libirecovery.h>
+#endif
+
 NS_ASSUME_NONNULL_BEGIN
 
 #define S518947X_OVERWRITE (unsigned char*)"\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x34\x00\x00\x00\x00"
