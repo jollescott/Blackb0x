@@ -27,7 +27,7 @@
 # ADDITIONAL_LDFLAGS +=
 
 # Additional library directories the linker should search
-# ADDITIONAL_LIB_DIRS += -ldispatch
+# ADDITIONAL_LIB_DIRS +=
 
 # Additional libraries when linking applications
 # ADDITIONAL_GUI_LIBS +=

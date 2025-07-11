@@ -21,6 +21,11 @@
 #else
 #include <libbootkit/config.h>
 #endif
+
+#ifdef GNUSTEP
+#include <libirecovery.h>
+#include <libimobiledevice/libimobiledevice.h>
+#endif
 /*
 #import "IOKit/hid/IOHIDManager.h"
 #include <IOKit/usb/IOUSBLib.h>
@@ -39,8 +44,11 @@
     NSImage *image = [NSImage imageNamed:@"atv-icon"];
     AppleTVIcon *icon = [[AppleTVIcon alloc] initWithFrame:NSMakeRect(0, 0, iconSize + spacing, iconSize + 100)];
     
+#ifndef GNUSTEP
     icon.wantsLayer = YES;
     icon.layer.cornerRadius = 24;
+#endif
+
     [icon unselect];
 
     icon.ATVImage = [[NSImageView alloc] initWithFrame:NSMakeRect(spacing /2, 75, iconSize, iconSize)];
@@ -70,7 +78,9 @@
     icon.versionField.drawsBackground = NO;
 
     icon.checkingIndicator = [[NSProgressIndicator alloc] initWithFrame:NSMakeRect(spacing / 2, -8, iconSize, 10)];
+#ifndef GNUSTEP
     icon.checkingIndicator.style = NSProgressIndicatorStyleBar;
+#endif
     [icon.checkingIndicator setIndeterminate:YES];
     icon.checkingIndicator.hidden = YES;
     [icon.checkingIndicator startAnimation:nil];
@@ -107,11 +117,15 @@
 }
 
 - (void) select {
+#ifndef GNUSTEP
     self.layer.backgroundColor = [NSColor colorWithWhite:1.0 alpha:0.08].CGColor;
+#endif
 }
 
 - (void) unselect {
+#ifndef GNUSTEP
     self.layer.backgroundColor = [NSColor colorWithWhite:1.0 alpha:0.03].CGColor;
+#endif
 }
 
 - (void) mouseUp:(NSEvent *)event {
