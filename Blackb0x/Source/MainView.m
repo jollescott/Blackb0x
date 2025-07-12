@@ -10,8 +10,9 @@
 #import "Blackb0x.h"
 #import "DeviceManager.h"
 #import "Patcher.h"
+#ifndef GNUSTEP
 #import <CoreImage/CoreImage.h>
-
+#endif
 @implementation MainView
 
 - (void) setSelected:(AppleTVIcon *) selected_icon {
@@ -72,10 +73,10 @@
 - (void) spawnDFUHelper {
     
     [NSApp activateIgnoringOtherApps:YES];
-    
+#ifndef GNUSTEP
     CGPoint pos = [[NSApplication sharedApplication] mainWindow].frame.origin;
     CGSize size = [[NSApplication sharedApplication] mainWindow].frame.size;
-    
+
     CGSize popupSize = CGSizeMake(600, 400);
     NSRect frame = NSMakeRect(pos.x + size.width / 2 - popupSize.width / 2,
                               pos.y + size.height / 2 - popupSize.height / 2,
@@ -166,9 +167,12 @@
         [myButton setAction:@selector(popupClose)];
         
     }
+#endif
 
     [_dfuHelper makeKeyAndOrderFront:NSApp];
+#ifndef GNUSTEP
     [[NSApplication sharedApplication] mainWindow].movable = NO;
+#endif
     [[NSApplication sharedApplication] mainWindow].alphaValue = 0.9;
     
 }
@@ -178,7 +182,9 @@
     [_dfuHelper close];
     
     [[NSApplication sharedApplication] mainWindow].alphaValue = 1.0;
+#ifndef GNUSTEP
     [[NSApplication sharedApplication] mainWindow].movable = YES;
+#endif
 }
 
 - (void)awakeFromNib {
@@ -467,20 +473,21 @@ NSComboBox *comboBox;
             progress_text = _progress_text4;
             break;
     }
-
+#ifndef GNUSTEP
    CIFilter *filter = [CIFilter filterWithName:@"CIColorPolynomial"];
    [filter setDefaults];
-    
+
    CIVector *redVector = [CIVector vectorWithX:color.redComponent Y:0 Z:0 W:0];
    CIVector *greenVector = [CIVector vectorWithX:color.greenComponent Y:0 Z:0 W:0];
    CIVector *blueVector = [CIVector vectorWithX:color.blueComponent Y:0 Z:0 W:0];
    [filter setValue:redVector forKey:@"inputRedCoefficients"];
    [filter setValue:greenVector forKey:@"inputGreenCoefficients"];
    [filter setValue:blueVector forKey:@"inputBlueCoefficients"];
-    
+#endif
    dispatch_async(dispatch_get_main_queue(), ^{
+#ifndef GNUSTEP
        [progress setContentFilters:[NSArray arrayWithObjects:filter, nil]];
-       
+#endif
        NSString *patching = [progress_text.stringValue stringByReplacingOccurrencesOfString:@"Downloading" withString:@"Patching"];
        progress_text.stringValue = patching;
    });
