@@ -13,7 +13,7 @@ APP_NAME = Blackb0x
 
 Blackb0x_OBJCFLAGS = -include Blackb0x.pch -Winvalid-pch -fobjc-runtime=gnustep-2 -fobjc-arc -fobjc-weak -fblocks
 
-Blackb0x_INCLUDE_DIRS = -ILibraries
+Blackb0x_INCLUDE_DIRS = -ILibraries -I../iBoot32Patcher
 
 Blackb0x_LDFLAGS = -ldispatch -lirecovery-1.0 -limobiledevice-1.0 -lplist-2.0 -lfragmentzip
 
@@ -23,7 +23,7 @@ Blackb0x_HEADERS = Source/AppDelegate.h \
 	Source/IPSW.h \
 	Source/IPSWDownloader.h \
 	Source/MainView.h \
-	Source/Patcher.h \
+	Source/Patcher.h 
 
 Blackb0x_OBJC_PRECOMPILED_HEADERS = Blackb0x.pch
 
@@ -40,7 +40,14 @@ Blackb0x_OBJCC_FILES = Source/IPSW.mm \
 Blackb0x_C_FILES = Libraries/libbootkit/libbootkit.c \
 	Libraries/libiboot32patcher.c \
 	Libraries/xpwntool.c \
-	Libraries/CBPatcher.c
+	../CBPatcher/CBPatch.c \
+	../CBPatcher/CBPatcher.c \
+	../CBPatcher/CBPUtils.c \
+	../iBoot32Patcher/functions.c \
+	../iBoot32Patcher/patchers.c \
+	../iBoot32Patcher/finders.c
+
+Blackb0x_CFLAGS = -Wno-multichar -Wno-error=int-conversion
 
 Blackb0x_RESOURCE_FILES = Info.plist
 
