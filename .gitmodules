@@ -1,0 +1,3 @@
+[submodule "iBoot32Patcher"]
+	path = iBoot32Patcher
+	url = git@github.com:tihmstar/iBoot32Patcher.git
