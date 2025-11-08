@@ -1,3 +1,6 @@
 [submodule "CBPatcher"]
 	path = CBPatcher
 	url = git@github.com:jollescott/CBPatcher.git
+[submodule "iBoot32Patcher"]
+	path = iBoot32Patcher
+	url = git@github.com:zzanehip/iBoot32Patcher.git
