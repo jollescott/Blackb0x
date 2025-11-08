@@ -13,9 +13,9 @@ APP_NAME = Blackb0x
 
 Blackb0x_OBJCFLAGS = -include Blackb0x.pch -Winvalid-pch -fobjc-runtime=gnustep-2 -fobjc-arc -fobjc-weak -fblocks
 
-Blackb0x_INCLUDE_DIRS = -ILibraries -I../iBoot32Patcher
+Blackb0x_INCLUDE_DIRS = -ILibraries -I../iBoot32Patcher -I../xpwntool-swift/includes
 
-Blackb0x_LDFLAGS = -ldispatch -lirecovery-1.0 -limobiledevice-1.0 -lplist-2.0 -lfragmentzip
+Blackb0x_LDFLAGS = -ldispatch -lirecovery-1.0 -limobiledevice-1.0 -lplist-2.0 -lfragmentzip -lcrypto -lz
 
 Blackb0x_HEADERS = Source/AppDelegate.h \
 	Source/Blackb0x.h \
@@ -39,10 +39,17 @@ Blackb0x_OBJCC_FILES = Source/IPSW.mm \
 
 Blackb0x_C_FILES = Libraries/libbootkit/libbootkit.c \
 	Libraries/libiboot32patcher.c \
-	Libraries/xpwntool.c \
+	../xpwntool-swift/xpwntool.c \
+	../xpwntool-swift/libxpwn.c \
+	../xpwntool-swift/abstractfile.c \
+	../xpwntool-swift/nor_files.c \
+	../xpwntool-swift/img2.c \
+	../xpwntool-swift/img3.c \
+	../xpwntool-swift/lzssfile.c \
+	../xpwntool-swift/lzss.c \
 	../CBPatcher/CBPatch.c \
-	../CBPatcher/CBPatcher.c \
 	../CBPatcher/CBPUtils.c \
+	Libraries/CBPatcher.c \
 	../iBoot32Patcher/functions.c \
 	../iBoot32Patcher/patchers.c \
 	../iBoot32Patcher/finders.c
