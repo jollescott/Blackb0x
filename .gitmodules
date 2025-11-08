@@ -4,3 +4,6 @@
 [submodule "iBoot32Patcher"]
 	path = iBoot32Patcher
 	url = git@github.com:zzanehip/iBoot32Patcher.git
+[submodule "xpwntool-swift"]
+	path = xpwntool-swift
+	url = git@github.com:zzanehip/xpwntool-swift.git
