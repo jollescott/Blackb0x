@@ -7,3 +7,6 @@
 [submodule "xpwntool-swift"]
 	path = xpwntool-swift
 	url = git@github.com:zzanehip/xpwntool-swift.git
+[submodule "libfragmentzip"]
+	path = libfragmentzip
+	url = git@github.com:tihmstar/libfragmentzip.git
