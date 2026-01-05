@@ -10,3 +10,6 @@
 [submodule "libfragmentzip"]
 	path = libfragmentzip
 	url = git@github.com:tihmstar/libfragmentzip.git
+[submodule "libgeneral"]
+	path = libgeneral
+	url = git@github.com:tihmstar/libgeneral.git
