@@ -13,9 +13,9 @@ APP_NAME = Blackb0x
 
 Blackb0x_OBJCFLAGS = -include Blackb0x.pch -Winvalid-pch -fobjc-runtime=gnustep-2 -fobjc-arc -fobjc-weak -fblocks
 
-Blackb0x_INCLUDE_DIRS = -ILibraries -I../iBoot32Patcher -I../xpwntool-swift/includes -I../libfragmentzip
+Blackb0x_INCLUDE_DIRS = -ILibraries -I../iBoot32Patcher -I../xpwntool-swift/includes -I../libfragmentzip -I../libgeneral/include
 
-Blackb0x_LDFLAGS = -ldispatch -lirecovery-1.0 -limobiledevice-1.0 -lplist-2.0 -lcrypto -lz
+Blackb0x_LDFLAGS = -ldispatch -lirecovery-1.0 -limobiledevice-1.0 -lplist-2.0 -lcrypto -lz -lcurl
 
 Blackb0x_HEADERS = Source/AppDelegate.h \
 	Source/Blackb0x.h \
