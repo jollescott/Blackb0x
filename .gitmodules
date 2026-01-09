@@ -13,3 +13,6 @@
 [submodule "libgeneral"]
 	path = libgeneral
 	url = git@github.com:tihmstar/libgeneral.git
+[submodule "libirecovery"]
+	path = libirecovery
+	url = git@github.com:synackuk/libirecovery.git
