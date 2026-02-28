@@ -27,10 +27,10 @@
 # ADDITIONAL_LDFLAGS +=
 
 # Additional library directories the linker should search
-# ADDITIONAL_LIB_DIRS +=
+ADDITIONAL_LIB_DIRS += -L../deps/obj
 
 # Additional libraries when linking applications
-# ADDITIONAL_GUI_LIBS +=
+ADDITIONAL_GUI_LIBS += -lCBPatcher -lfragmentzip -lgeneral -liBoot32Patcher -lirecovery -lxpwntool-swift
 
 #
 # Flags dealing with installing and uninstalling

@@ -1,18 +1,18 @@
-[submodule "CBPatcher"]
-	path = CBPatcher
+[submodule "deps/CBPatcher"]
+	path = deps/CBPatcher
 	url = git@github.com:jollescott/CBPatcher.git
-[submodule "iBoot32Patcher"]
-	path = iBoot32Patcher
-	url = git@github.com:zzanehip/iBoot32Patcher.git
-[submodule "xpwntool-swift"]
-	path = xpwntool-swift
-	url = git@github.com:zzanehip/xpwntool-swift.git
-[submodule "libfragmentzip"]
-	path = libfragmentzip
-	url = git@github.com:tihmstar/libfragmentzip.git
-[submodule "libgeneral"]
-	path = libgeneral
-	url = git@github.com:tihmstar/libgeneral.git
-[submodule "libirecovery"]
-	path = libirecovery
+[submodule "deps/libirecovery"]
+	path = deps/libirecovery
 	url = git@github.com:synackuk/libirecovery.git
+[submodule "deps/libgeneral"]
+	path = deps/libgeneral
+	url = git@github.com:tihmstar/libgeneral.git
+[submodule "deps/libfragmentzip"]
+	path = deps/libfragmentzip
+	url = git@github.com:tihmstar/libfragmentzip.git
+[submodule "deps/iBoot32Patcher"]
+	path = deps/iBoot32Patcher
+	url = git@github.com:zzanehip/iBoot32Patcher.git
+[submodule "deps/xpwntool-swift"]
+	path = deps/xpwntool-swift
+	url = git@github.com:zzanehip/xpwntool-swift.git
